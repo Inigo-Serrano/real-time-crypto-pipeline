@@ -91,9 +91,8 @@ The crawler can be provisioned programmatically with `boto3`, allowing the inges
 
 AWS Glue and Spark load the yearly CSV partitions, clean and normalize the data, and write the resulting dataset into a Silver layer using **Apache Parquet**.
 
-Parquet provides columnar storage, efficient compression and faster analytical reads than the original CSV representation.
-
-![Silver layer stored in Amazon S3](docs/images/s3-silver-layer-s3.png)
+Parquet provides columnar storage, efficient compression and faster analytical reads than the original CSV representation
+![Silver layer stored in Amazon S3](images/s3-silver-layer-s3.png)
 
 ---
 
@@ -180,7 +179,7 @@ MACD
 RSI_14
 ```
 
-![Gold-layer dataframe with technical indicators](docs/images/gold-layer-indicators.png)
+![Gold-layer dataframe with technical indicators](images/gold-layer-indicators.png)
 
 ---
 
@@ -190,7 +189,7 @@ The Gold-layer dataset is exposed to **Amazon QuickSight** for interactive explo
 
 The dashboard allows the processed data to be compared visually across time and provides a higher-level analytical view of the transformed dataset.
 
-![Historical LINK price and volume in Amazon QuickSight](docs/images/quicksight-price-volume.png)
+![Historical LINK price and volume in Amazon QuickSight](images/quicksight-price-volume.png)
 
 ---
 
@@ -265,7 +264,7 @@ Keeping raw market observations and derived metrics as separate streams decouple
 
 The consumers convert timestamps to epoch milliseconds and write time-series records through `boto3`.
 
-![Real-time producer, processor and consumer terminals](docs/images/streaming-terminals.png)
+![Real-time producer, processor and consumer terminals](images/streaming-terminals.png)
 
 ---
 
@@ -291,7 +290,7 @@ Amazon Timestream
 Grafana
 ```
 
-![Real-time LINK price and VWAP in Grafana](docs/images/grafana-realtime.png)
+![Real-time LINK price and VWAP in Grafana](images/grafana-realtime.png)
 
 ---
 
